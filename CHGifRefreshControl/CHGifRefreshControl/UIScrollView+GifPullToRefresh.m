@@ -64,6 +64,7 @@ static char UIScrollViewGifPullToRefresh;
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0) {
         view.originalContentInsectY = 64;
     }
+    view.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         
     view.scrollView = self;
     view.pullToRefreshActionHandler = actionHandler;
@@ -98,7 +99,7 @@ static char UIScrollViewGifPullToRefresh;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor blackColor];
+        self.backgroundColor = [UIColor whiteColor];
         _refreshView = [[UIImageView alloc] initWithFrame:self.bounds];
         _refreshView.contentMode = UIViewContentModeScaleAspectFit;
         _refreshView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
