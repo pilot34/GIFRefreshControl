@@ -27,7 +27,7 @@
 #import "UIScrollView+GifPullToRefresh.h"
 #import <objc/runtime.h>
 
-#define GifRefreshControlHeight 103.0
+#define GifRefreshControlHeight 80
 
 @interface CHGifRefreshControl()
 - (void)removeObservers;
@@ -99,7 +99,7 @@ static char UIScrollViewGifPullToRefresh;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
         _refreshView = [[UIImageView alloc] initWithFrame:self.bounds];
         _refreshView.contentMode = UIViewContentModeScaleAspectFit;
         _refreshView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
